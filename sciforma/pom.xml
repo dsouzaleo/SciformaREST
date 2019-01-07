@@ -8,7 +8,6 @@
     <packaging>war</packaging>
     <version>0.0.1-SNAPSHOT</version>
     <name>sciforma</name>
-
     <dependencyManagement>
         <dependencies>
             <dependency>
@@ -18,10 +17,31 @@
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
+            
         </dependencies>
     </dependencyManagement>
 
     <dependencies>
+			<dependency>
+			    <groupId>com.sciforma</groupId>
+			    <artifactId>psnext</artifactId>
+			    <version>1.0</version>
+			</dependency>
+			<dependency>
+			    <groupId>com.sciforma</groupId>
+			    <artifactId>psnext_en</artifactId>
+			    <version>1.0</version>
+			</dependency>
+			<dependency>
+			    <groupId>com.sciforma</groupId>
+			    <artifactId>utilities</artifactId>
+			    <version>1.0</version>
+			</dependency>
+			<dependency>
+    <groupId>commons-codec</groupId>
+    <artifactId>commons-codec</artifactId>
+    <version>1.10</version>
+</dependency>
         <dependency>
             <groupId>org.glassfish.jersey.containers</groupId>
             <artifactId>jersey-container-servlet</artifactId>
@@ -30,13 +50,16 @@
             <groupId>org.glassfish.jersey.inject</groupId>
             <artifactId>jersey-hk2</artifactId>
         </dependency>
-
+		  <dependency>
+		    <groupId>org.glassfish.jersey.media</groupId>
+		    <artifactId>jersey-media-json-jackson</artifactId>
+		  </dependency>
         <!-- uncomment this to get JSON support
         <dependency>
             <groupId>org.glassfish.jersey.media</groupId>
             <artifactId>jersey-media-json-binding</artifactId>
         </dependency> -->
-
+		
         <dependency>
             <groupId>org.eclipse.jetty</groupId>
             <artifactId>jetty-servlet</artifactId>
@@ -56,6 +79,22 @@
             <type>pom</type>
             <scope>test</scope>
         </dependency>
+		
+		<!-- https://mvnrepository.com/artifact/javax.json/javax.json-api -->
+		<dependency>
+		    <groupId>javax.json</groupId>
+		    <artifactId>javax.json-api</artifactId>
+		    <version>1.1.2</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.glassfish/javax.json -->
+		<dependency>
+		    <groupId>org.glassfish</groupId>
+		    <artifactId>javax.json</artifactId>
+		    <version>1.1.2</version>
+		</dependency>
+
+				
+		
     </dependencies>
 
     <build>
